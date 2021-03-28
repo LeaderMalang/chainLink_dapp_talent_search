@@ -1,3 +1,4 @@
+
 # Chainlink Fun
 > Learn about chainlink by working through basic examples.
 
@@ -44,3 +45,35 @@ chainlinkPassword
 - Type in the credentials specified in your `apicredentials.txt` file and boom! You are logged into your locally running Chainlink node.
 - You can locate your account address by clicking on the `Configuration` tab in the top right corner and locating the ACCOUNT_ADDRESS key variable.
 - From here you should fund your address LINK and ETH. You can do that by copying your account address and going to the [LINK ropsten faucet](https://ropsten.chain.link/) and [ETH ropsten faucet](https://faucet.ropsten.be/).
+=======
+# Chainlink Python  External Adapter 
+
+This template shows a basic usecase of an external adapter written in Python for the CryptoCompare API. It can be ran locally.
+
+## Install
+
+```
+pipenv install
+```
+
+## Test
+
+```
+pipenv run pytest
+```
+
+##run 
+````
+python app.py
+````
+
+##curl request to test 
+``````
+curl -X POST \
+  http://0.0.0.0:8060/ \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 16ce459e-1fb1-f864-5e1e-f144bfa24357' \
+  -d '{"id": "dada", "data": {"base": "ETH", "quote": "USD"}}
+  '
+``````
