@@ -8,7 +8,7 @@ services:
       - database.env
     volumes:
       # [PATH_TO_POSTGRES_DATA]:/var/lib/postgressql/data/
-      - ./chainlink-volume/:/var/lib/postgressql/data/
+      - ./chainlink_app_contracts-volume/:/var/lib/postgressql/data/
   chainlink:
     image: "smartcontract/chainlink"
     env_file: .env
@@ -17,6 +17,6 @@ services:
     ports:
       - "6688:6688"
     volumes:
-      # [PATH_TO_REPO_CHAINLINK_VOLUME]:/chainlink/
-      - /Users/casper.local/Desktop/Dev/blockchain_Link/chainlink-fun/run-node/chainlink-volume/:/chainlink/
-    command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt
+      # [PATH_TO_REPO_CHAINLINK_VOLUME]:/chainlink_app_contracts/
+      - /Users/casper.local/Desktop/Dev/blockchain_Link/chainlink_app_contracts-fun/run-node/chainlink_app_contracts-volume/:/chainlink_app_contracts/
+    command: node start --password /chainlink_app_contracts/password.txt --api /chainlink_app_contracts/apicredentials.txt
