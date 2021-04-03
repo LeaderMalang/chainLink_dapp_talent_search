@@ -18,5 +18,6 @@ services:
       - "6688:6688"
     volumes:
       # [PATH_TO_REPO_CHAINLINK_VOLUME]:/chainlink_app_contracts/
+      #/Users/casper.local/Desktop/Dev/blockchain_Link/chainlink-fun/chainlink_app_contracts
       - /Users/casper.local/Desktop/Dev/blockchain_Link/chainlink_app_contracts-fun/run-node/chainlink_app_contracts-volume/:/chainlink_app_contracts/
-    command: node start --password /chainlink_app_contracts/password.txt --api /chainlink_app_contracts/apicredentials.txt
+    command: node start --password /Users/casper.local/Desktop/Dev/blockchain_Link/chainlink-fun/run-node/chainlink-volume/password.txt --api /Users/casper.local/Desktop/Dev/blockchain_Link/chainlink-fun/run-node/chainlink-volume/apicredentials.txt
